@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <body>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <div id="root"></div>
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+
+      function Button({ number }) {
+        return (<button style={{backgroundColor: number % 2 === 0 ? "pink": "green"}}>{number}</button>);
+      }
+      
+      const Buttons = () => (
+        <>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <Button number={4} />
+          <Button number={5} />
+          <Button number={6} />
+        </>
+      );
+
+      ReactDOM.createRoot(rootElement).render(Buttons());
+    </script>
+  </body>
+</html>
