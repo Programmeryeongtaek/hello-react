@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<body>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <div id="root"></div>
+  <script type="text/babel">
+    const rootElement = document.getElementById("root");
+
+    function draw() {
+      const number = Math.floor(Math.random() * 9 + 1);
+      const element = (
+        <React.Fragment>
+          <button>{number}</button>
+          <div>
+            <p>{number}</p>
+          </div>
+        </React.Fragment>
+      );
+      ReactDOM.render(element, rootElement);
+    }
+
+    setInterval(draw, 1000);
+  </script>
+</body>
+</html>

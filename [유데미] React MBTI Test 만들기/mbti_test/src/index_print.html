@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<body>
+  <h1>Hello HTML!</h1>
+  <br>
+  <hr>
+  <br>
+  <div id="root"></div>
+  <script>
+    const rootElement = document.getElementById("root");
+    const element = document.createElement("h1");
+    element.textContent = "Hello JavaScript!";
+
+    rootElement.appendChild(element);
+  </script>
+  <br>
+  <hr>
+  <br>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  
+  <div id="root2"></div>
+  <script>
+    const rootElement2 = document.getElementById("root2");
+    const element2 = React.createElement("h1", {
+      children: "Hello React!"
+    });
+
+    ReactDOM.render(element2, rootElement2);
+  </script>
+  <br>
+  <hr>
+  <br>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <div id="root3"></div>
+  <script type="text/babel">
+    const rootElement3 = document.getElementById("root3");
+
+    const text = "Hello JSX!";
+
+    const element3 = <h1>{text}</h1>
+
+    ReactDOM.render(element3, rootElement3);
+  </script>
+</body>
+</html>
