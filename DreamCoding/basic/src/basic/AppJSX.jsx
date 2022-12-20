@@ -2,7 +2,7 @@ import './style/AppJSX.css';
 
 function AppJSX() {
   const name = '영택';
-  const list =['HTML', 'CSS', 'JavaScript', 'React'];
+  const list = ['HTML', 'CSS', 'JavaScript', 'React'];
   
   return (
     <>
